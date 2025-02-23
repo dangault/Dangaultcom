@@ -1,25 +1,26 @@
-<!-- admin/index.html (Netlify CMS Login Page) --><!DOCTYPE html><html lang="en">
+<!-- index.html (Home Page) --><!DOCTYPE html><html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Login</title>
+    <title>Dan Gault Ministries</title>
+    <link rel="stylesheet" href="style.css">
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script src="https://unpkg.com/netlify-cms@^2.10.0/dist/netlify-cms.min.js"></script>
 </head>
 <body>
-    <script>
-        if (window.netlifyIdentity) {
-            window.netlifyIdentity.on("init", (user) => {
-                if (!user) {
-                    window.netlifyIdentity.on("login", () => {
-                        document.location.href = "/admin/";
-                    });
-                }
-            });
-        }
-    </script>
-    <h2>Admin Login</h2>
-    <p><a href="/admin/">Go to Blog Editor</a></p>
+    <header><a href="index.html">Dan Gault Ministries</a></header>
+    <nav>
+        <a href="index.html" class="btn">Home</a>
+        <a href="ministry.html" class="btn">My Ministry</a>
+        <a href="vision.html" class="btn">Vision</a>
+        <a href="contact.html" class="btn">Contact Me</a>
+        <a href="blog.html" class="btn">Blog</a>
+    </nav>
+    <div class="content">
+        <img src="dan.jpg" alt="Picture of Dan Gault" width="200">
+        <h2>About Dan Gault</h2>
+        <p>My childhood was filled with challenges, including sexual and physical abuse. These experiences shaped me in ways I didn’t fully understand at the time. I was called to preach at 14, but like many, I allowed the temptations of the world—women, drugs, and a reckless lifestyle—to take priority. I convinced myself that I was just living life, not realizing that I was heading down a destructive path.</p>
+        <p>For years, I didn’t see my struggles as an addiction. I thought my behavior was normal, just part of how the world worked. But in reality, I was lost, numbing pain I hadn’t even acknowledged. It wasn’t until my arrest in 2017 that everything came into focus. In the stillness of a prison cell, I finally saw the truth: I had been destroying myself. That’s when I surrendered fully to God, allowing Him to rebuild me from the inside out.</p>
+    </div>
+    <footer><a href="index.html">&copy; 2025 Dan Gault Ministries</a></footer>
 </body>
-</html>
-
-
