@@ -1,0 +1,40 @@
+# Backend configuration
+backend:
+  name: git-gateway # Enables Git Gateway for authentication
+  branch: main      # Replace 'main' with your default branch (e.g., 'master')
+
+# Publish mode
+publish_mode: editorial_workflow # Optional: Enables draft and review workflows
+
+# Media folder configuration
+media_folder: "static/images/uploads" # Folder where uploaded images are stored
+public_folder: "/images/uploads"      # Public path to access uploaded images
+
+# Collections (content types)
+collections:
+  - name: blog           # Unique identifier for the collection
+    label: Blog          # Label in the CMS UI
+    folder: "posts"      # Folder where blog posts are stored
+    create: true         # Allows users to create new entries
+    slug: "{{slug}}"     # File name template for new entries
+    fields:
+      - { label: "Title", name: "title", widget: "string" }       # Blog post title
+      - { label: "Date", name: "date", widget: "datetime" }      # Publish date
+      - { label: "Author", name: "author", widget: "string" }    # Author name
+      - { label: "Body", name: "body", widget: "markdown" }      # Blog content
+      - { label: "Image", name: "image", widget: "image" }       # Featured image
+
+  - name: pages          # Another collection for pages (optional)
+    label: Pages         # Label in the CMS UI
+    folder: "content/pages"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+# Optional settings for editor interface
+slug:
+  encoding: unicode       # Supports Unicode characters in slugs
+  clean_accents: true     # Removes accents from characters in slugs
+
